@@ -1,0 +1,1 @@
+import"./style-B7kjI4eS.js";const e=document.querySelectorAll(".nav_link"),a=window.location.pathname;e.forEach(n=>{const o=new URL(n.href).pathname;a===o&&n.classList.add("pageActive")});console.log(a);

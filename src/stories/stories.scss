@@ -1,0 +1,563 @@
+@use "../assets/styles/media-queries" as *;
+
+.content {
+  background-image: url(../assets/stories/desktop/moon-of-appalacia.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include xs {
+    background-image: url(../assets/stories/mobile/moon-of-appalacia.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 361px 1fr;
+  }
+  @include md {
+    background-image: url(../assets/stories/tablet/moon-of-appalacia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+  }
+}
+
+.container {
+  position: relative;
+  left: 10rem;
+  width: 400px;
+  color: var(--white);
+  @include xs {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: var(--black);
+    position: relative;
+    left: 0rem;
+    width: 100%;
+    padding: 3rem 2rem 3rem 2rem;
+  }
+  @include md {
+    position: relative;
+    left: 6rem;
+  }
+  @media (hover: hover) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  h3 {
+    letter-spacing: 1.5px;
+  }
+  h1 {
+    width: 300px;
+    margin: 2rem 0;
+    letter-spacing: 0.5rem;
+    @include xs {
+      font-size: 35px;
+    }
+  }
+  p {
+    color: var(--grey);
+    margin: 2rem 0;
+    letter-spacing: 1.5px;
+  }
+  span {
+    color: var(--white);
+  }
+  img {
+    margin: 0 0 0 1rem;
+    position: relative;
+    top: 0.2rem;
+  }
+}
+
+.elements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 75vh);
+  @include xs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 1fr);
+  }
+  @include md {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+
+.elem {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  cursor: pointer;
+  @include xs {
+    height: 420px;
+  }
+  @include md {
+    height: 650px;
+  }
+  h3 {
+    margin: 0 0 0 1.5rem;
+  }
+  p {
+    margin: 0 0 0 1.5rem;
+  }
+  .separator {
+    width: 87%;
+    height: 0.1px;
+    background: var(--white);
+    margin: 0.8rem;
+    position: relative;
+    left: 0.8rem;
+  }
+  h4 {
+    margin: 0 0 1.2rem 1.5rem;
+
+    img {
+      position: relative;
+      left: 18rem;
+      @include xs {
+        position: relative;
+        left: 15.8rem;
+      }
+      @include md {
+        position: relative;
+        left: 19.5rem;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .elements {
+    .elem:hover {
+      transform: translateY(-1.5rem);
+      transition: transform 1s;
+    }
+  }
+}
+
+.elem1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: url(../assets/stories/desktop/mountains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/mountains.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  @include md {
+    // background-image: url(../assets/stories/desktop/mountains.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.elem2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: url(../assets/stories/desktop/cityscapes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/cityscapes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.elem3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: url(../assets/stories/desktop/18-days-voyage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/18-days-voyage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.elem4 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: url(../assets/stories/desktop/architecturals.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/architecturals.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
+.elem5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url(../assets/stories/desktop/world-tour.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/world-tour.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.elem6 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url(../assets/stories/desktop/unforeseen-corners.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/unforeseen-corners.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.elem7 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url(../assets/stories/desktop/king-on-africa.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/king-on-africa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+.elem8 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-image: url(../assets/stories/desktop/trip-to-nowhere.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/trip-to-nowhere.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+}
+
+.elem9 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(../assets/stories/desktop/rage-of-the-sea.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/rage-of-the-sea.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+.elem10 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(../assets/stories/desktop/running-free.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/running-free.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
+
+.elem11 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(../assets/stories/desktop/behind-the-waves.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/behind-the-waves.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 12;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+}
+
+.elem12 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-image: url(../assets/stories/desktop/calm-waters.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/calm-waters.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 12;
+    grid-row-end: 13;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+}
+
+.elem13 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url(../assets/stories/desktop/milky-way.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/milky-way.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+    grid-row-end: 14;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+}
+
+.elem14 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url(../assets/stories/desktop/dark-forest.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/dark-forest.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 14;
+    grid-row-end: 15;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+}
+
+.elem15 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url(../assets/stories/desktop/somwarpet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/somwarpet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 15;
+    grid-row-end: 16;
+  }
+  @include md {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+}
+
+.elem16 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-image: url(../assets/stories/desktop/land-of-dreams.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  @include xs {
+    background-image: url(../assets/stories/mobile/land-of-dreams.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 16;
+    grid-row-end: 17;
+  }
+  @include md {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+}

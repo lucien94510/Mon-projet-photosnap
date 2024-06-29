@@ -1,0 +1,224 @@
+@use "base" as *;
+@use "variables" as *;
+@use "reset" as *;
+@use "classes" as *;
+@use "utils" as *;
+@use "media-queries" as *;
+
+.topbar {
+  height: 100px;
+  background: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include xs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+  }
+  @include md {
+    margin: 0.5rem 1.5rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    @include xs {
+      position: relative;
+      right: 5.5rem;
+    }
+  }
+  .nav {
+    display: flex;
+    list-style: none;
+    @include xs {
+      display: flex;
+      flex-direction: column;
+    }
+    li {
+      margin: 0 1rem;
+      font-weight: bold;
+      @include xs {
+        margin: 0.8rem;
+      }
+      a {
+        color: var(--black);
+        font-weight: bold;
+      }
+      .pageActive {
+        color: #bdc3c7;
+      }
+    }
+  }
+  .invitation-topbar {
+    color: var(--white);
+    background: var(--black);
+    padding: 0.5rem 1rem;
+    letter-spacing: 2px;
+
+    @include xs {
+      width: 80%;
+      text-align: center;
+      text-decoration: underline #bdc3c7 1px;
+      text-underline-offset: -3rem;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .nav li:hover {
+    a {
+      color: var(--grey);
+    }
+  }
+}
+
+@media (hover: hover) {
+  .invitation-topbar:hover {
+    background: var(--grey);
+    a {
+      color: var(--black);
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background: var(--black);
+  height: 25vh;
+  padding-left: 5rem;
+  @include xs {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+  }
+  @include md {
+    padding: 1.5rem;
+    height: 35vh;
+  }
+  .logoandsocialmedia {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    @include xs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-footer {
+      margin: 1rem 0;
+      padding: 1.8rem 0.2rem 1.8rem 0;
+
+      @include md {
+        position: relative;
+        left: 3rem;
+        bottom: 2.5rem;
+      }
+    }
+    .social-media {
+      @include xs {
+        height: 50px;
+        position: relative;
+        bottom: 2rem;
+        right: 0rem;
+      }
+      width: 200px;
+      height: 150px;
+      position: relative;
+      right: 0.6rem;
+      @include md {
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+      }
+    }
+  }
+  .nav-footer {
+    position: relative;
+    right: 20rem;
+    top: 0.4rem;
+    @include xs {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: -3rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    @include md {
+      display: flex;
+      position: relative;
+      right: 12.8rem;
+      top: -2.5rem;
+    }
+    @include xl {
+      display: flex;
+      position: relative;
+      right: 19rem;
+      top: -2.5rem;
+    }
+    li {
+      padding: 0.3rem;
+      @include md {
+        padding-right: 0.5rem;
+      }
+      a {
+        color: var(--white);
+      }
+    }
+  }
+  div {
+    position: relative;
+    right: 3rem;
+    .invitation-footer {
+      position: relative;
+      bottom: 1.5rem;
+      margin: 0 0 0 2rem;
+      padding: 2rem;
+      @include md {
+        position: relative;
+        left: 1rem;
+        bottom: 4rem;
+        width: 200px;
+        margin: 0;
+        padding: 0rem;
+      }
+      img {
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .nav-footer li:hover {
+    a {
+      color: var(--grey);
+    }
+  }
+}
+
+@media (hover: hover) {
+  .invitation-footer:hover {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .invitation-content:hover {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.i {
+  margin: 1.5rem 0.5rem;
+}
